@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,66 +65,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-yearwise-publications .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-year','listing-data',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-year","listing-data"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-yearwise-publications'] = new List('listing-yearwise-publications', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -149,7 +89,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./markdown.html"> 
+    <a class="nav-link active" href="./markdown.html" aria-current="page"> 
 <span class="menu-text">Markdown</span></a>
   </li>  
 </ul>
@@ -169,7 +109,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#publications-by-year" id="toc-publications-by-year" class="nav-link active" data-scroll-target="#publications-by-year">Publications by Year</a></li>
+  <li><a href="#publications-by-year" id="toc-publications-by-year" class="nav-link active" data-scroll-target="#publications-by-year">Publications by Year</a>
+  <ul class="collapse">
+  <li><a href="#2022" id="toc-2022" class="nav-link" data-scroll-target="#2022">2022</a></li>
+  <li><a href="#2021" id="toc-2021" class="nav-link" data-scroll-target="#2021">2021</a></li>
+  <li><a href="#2020" id="toc-2020" class="nav-link" data-scroll-target="#2020">2020</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -181,13 +126,12 @@ window.Quarto = {
 
 <section id="publications-by-year" class="level2">
 <h2 class="anchored" data-anchor-id="publications-by-year">Publications by Year</h2>
-<div id="listing-yearwise-publications" class="quarto-listing quarto-listing-container-custom">
 <section id="2022" class="level3">
 <h3 class="anchored" data-anchor-id="2022">2022</h3>
 <div id="AllWenMarEtal22" class="entry-block">
 <section id="sparse-moes-meet-efficient-ensembles" class="level4">
 <h4 class="anchored" data-anchor-id="sparse-moes-meet-efficient-ensembles"><a href="https://openreview.net/forum?id=i0ZM36d2qU">Sparse MoEs meet Efficient Ensembles</a></h4>
-<p>James Urquhart Allingham, Florian Wenzel, Zelda E Mariet, Basil Mustafa, Joan Puigcerver, Neil Houlsby, Ghassen Jerfel, Vincent Fortuin, Balaji Lakshminarayanan, Jasper Snoek, Dustin Tran, Carlos Riquelme Ruiz, Rodolphe Jenatton, 2022. (Transactions on Machine Learning Research).</p>
+<p>James Urquhart Allingham, Florian Wenzel, Zelda E Mariet, Basil Mustafa, Joan Puigcerver, Neil Houlsby, Ghassen Jerfel, Vincent Fortuin, Balaji Lakshminarayanan, Jasper Snoek, Dustin Tran, Carlos Riquelme Ruiz, Rodolphe Jenatton, 2022.</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AllWenMarEtal22')">Abstract<span id="arrow-abstract-AllWenMarEtal22" class="arrow arrow-down">▼</span></span> <a href="https://openreview.net/forum?id=i0ZM36d2qU" class="tab-link">URL</a></p>
 </div>
@@ -200,7 +144,7 @@ window.Quarto = {
 <div id="AntJanAllEtal22" class="entry-block">
 <section id="adapting-the-linearised-laplace-model-evidence-for-modern-deep-learning" class="level4">
 <h4 class="anchored" data-anchor-id="adapting-the-linearised-laplace-model-evidence-for-modern-deep-learning"><a href="https://proceedings.mlr.press/v162/antoran22a.html">Adapting the Linearised Laplace Model Evidence for Modern Deep Learning</a></h4>
-<p>Javier Antorán, David Janz, James Urquhart Allingham, Erik A. Daxberger, Riccardo Barbano, Eric T. Nalisnick, José Miguel Hernández-Lobato, 2022. (In 39th International Conference on Machine Learning). Edited by Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvári, Gang Niu, Sivan Sabato. PMLR. Proceedings of Machine Learning Research.</p>
+<p>Javier Antorán, David Janz, James Urquhart Allingham, Erik A. Daxberger, Riccardo Barbano, Eric T. Nalisnick, José Miguel Hernández-Lobato, Edited by Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvári, Gang Niu, Sivan Sabato. 2022. (In 39th International Conference on Machine Learning, Proceedings of Machine Learning Research, Volume 162, Pages 796–821).</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AntJanAllEtal22')">Abstract<span id="arrow-abstract-AntJanAllEtal22" class="arrow arrow-down">▼</span></span> <a href="https://proceedings.mlr.press/v162/antoran22a.html" class="tab-link">URL</a></p>
 </div>
@@ -215,7 +159,7 @@ window.Quarto = {
 <div id="AitYanObe21" class="entry-block">
 <section id="deep-kernel-processes" class="level4">
 <h4 class="anchored" data-anchor-id="deep-kernel-processes"><a href="http://proceedings.mlr.press/v139/aitchison21a/aitchison21a.pdf">Deep kernel processes</a></h4>
-<p>Laurence Aitchison, Adam X. Yang, Sebastian W. Ober, 2021. (In 38th International Conference on Machine Learning).</p>
+<p>Laurence Aitchison, Adam X. Yang, Sebastian W. Ober, 2021.</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AitYanObe21')">Abstract<span id="arrow-abstract-AitYanObe21" class="arrow arrow-down">▼</span></span> <a href="http://proceedings.mlr.press/v139/aitchison21a/aitchison21a.pdf" class="tab-link">URL</a></p>
 </div>
@@ -227,7 +171,7 @@ window.Quarto = {
 <div id="AntBhaAdeEtal20" class="entry-block">
 <section id="getting-a-clue-a-method-for-explaining-uncertainty-estimates" class="level4">
 <h4 class="anchored" data-anchor-id="getting-a-clue-a-method-for-explaining-uncertainty-estimates"><a href="https://openreview.net/forum?id=XSLF1XFq5h">Getting a CLUE: A Method for Explaining Uncertainty Estimates</a></h4>
-<p>Javier Antorán, Umang Bhatt, Tameem Adel, Adrian Weller, José Miguel Hernández-Lobato, April 2021. (In 9th International Conference on Learning Representations).</p>
+<p>Javier Antorán, Umang Bhatt, Tameem Adel, Adrian Weller, José Miguel Hernández-Lobato. 2021, April.</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AntBhaAdeEtal20')">Abstract<span id="arrow-abstract-AntBhaAdeEtal20" class="arrow arrow-down">▼</span></span> <a href="https://openreview.net/forum?id=XSLF1XFq5h" class="tab-link">URL</a></p>
 </div>
@@ -242,7 +186,7 @@ window.Quarto = {
 <div id="AntAllHer20" class="entry-block">
 <section id="depth-uncertainty-in-neural-networks" class="level4">
 <h4 class="anchored" data-anchor-id="depth-uncertainty-in-neural-networks"><a href="https://proceedings.neurips.cc/paper/2020/hash/781877bda0783aac5f1cf765c128b437-Abstract.html">Depth Uncertainty in Neural Networks</a></h4>
-<p>Javier Antorán, James Urquhart Allingham, José Miguel Hernández-Lobato, 2020. (In Advances in Neural Information Processing Systems 33). Edited by Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, Hsuan-Tien Lin.</p>
+<p>Javier Antorán, James Urquhart Allingham, José Miguel Hernández-Lobato, 2020.</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AntAllHer20')">Abstract<span id="arrow-abstract-AntAllHer20" class="arrow arrow-down">▼</span></span> <a href="https://proceedings.neurips.cc/paper/2020/hash/781877bda0783aac5f1cf765c128b437-Abstract.html" class="tab-link">URL</a></p>
 </div>
@@ -255,77 +199,18 @@ window.Quarto = {
 <div id="AshSoTebetal20" class="entry-block">
 <section id="sparse-gaussian-process-variational-autoencoders" class="level4">
 <h4 class="anchored" data-anchor-id="sparse-gaussian-process-variational-autoencoders"><a href="https://arxiv.org/abs/2010.10177">Sparse Gaussian process variational autoencoders</a></h4>
-<p>Matthew Ashman, Jonny So, Will Tebbutt, Vincent Fortuin, Michael Pearce, Richard E. Turner, 2020.</p>
+<p>Matthew Ashman, Jonny So, Will Tebbutt, Vincent Fortuin, Michael Pearce, Richard E. Turner. 2020.</p>
 <div class="tab-set">
 <p><span class="tab-link" onclick="toggleAbstract('abstract-AshSoTebetal20')">Abstract<span id="arrow-abstract-AshSoTebetal20" class="arrow arrow-down">▼</span></span> <a href="https://arxiv.org/abs/2010.10177" class="tab-link">URL</a></p>
 </div>
 <div id="abstract-AshSoTebetal20" class="abstract-content">
-<p>Large, multi-dimensional spatio-temporal datasets are omnipresent in modern science and engineering. An effective framework for handling such data are Gaussian process deep generative models (GP-DGMs), which employ GP priors over the latent variables of DGMs. Existing approaches for performing inference in GP-DGMs do not support sparse GP approximations based on inducing points, which are essential for the computational efficiency of GPs, nor do they handle missing data – a natural occurrence in many spatio-temporal datasets – in a principled manner. We address these shortcomings with the development of the sparse Gaussian process variational autoencoder (SGP-VAE), characterised by the use of partial inference networks for parameterising sparse GP approximations. Leveraging the benefits of amortised variational inference, the SGP-VAE enables inference in multi-output sparse GPs on previously unobserved data with no additional training. The SGP-VAE is evaluated in a variety of experiments where it outperforms alternative approaches including multi-output GPs and structured VAEs.</p>
-</div>
-</section>
-</div>
-</section>
-<section id="2019" class="level3">
-<h3 class="anchored" data-anchor-id="2019">2019</h3>
-<div id="AdeValGhaWel19" class="entry-block">
-<section id="one-network-adversarial-fairness" class="level4">
-<h4 class="anchored" data-anchor-id="one-network-adversarial-fairness"><a href="http://mlg.eng.cam.ac.uk/adrian/AAAI2019_OneNetworkAdversarialFairness.pdf">One-network Adversarial Fairness</a></h4>
-<p>Tameem Adel, Isabel Valera, Zoubin Ghahramani, Adrian Weller, January 2019. (In 33rd AAAI Conference on Artificial Intelligence). Hawaii.</p>
-<div class="tab-set">
-<p><span class="tab-link" onclick="toggleAbstract('abstract-AdeValGhaWel19')">Abstract<span id="arrow-abstract-AdeValGhaWel19" class="arrow arrow-down">▼</span></span> <a href="http://mlg.eng.cam.ac.uk/adrian/AAAI2019_OneNetworkAdversarialFairness.pdf" class="tab-link">URL</a></p>
-</div>
-<div id="abstract-AdeValGhaWel19" class="abstract-content">
-<p>There is currently a great expansion of the impact of machine learning algorithms on our lives, prompting the need for objectives other than pure performance, including fairness. Fairness here means that the outcome of an automated decision-making system should not discriminate between subgroups characterized by sensitive attributes such as gender or race. Given any existing differentiable classifier, we make only slight adjustments to the architecture including adding a new hidden layer, in order to enable the concurrent adversarial optimization for fairness and accuracy. Our framework provides one way to quantify the tradeoff between fairness and accuracy, while also leading to strong empirical performance.</p>
-</div>
-</section>
-</div>
-<div id="AdeWel19" class="entry-block">
-<section id="tibgm-a-transferable-and-information-based-graphical-model-approach-for-reinforcement-learning" class="level4">
-<h4 class="anchored" data-anchor-id="tibgm-a-transferable-and-information-based-graphical-model-approach-for-reinforcement-learning"><a href="http://mlg.eng.cam.ac.uk/adrian/ICML2019-TibGM.pdf">TibGM: A Transferable and Information-Based Graphical Model Approach for Reinforcement Learning</a></h4>
-<p>Tameem Adel, Adrian Weller, June 2019. (In 36th International Conference on Machine Learning). Long Beach.</p>
-<div class="tab-set">
-<p><span class="tab-link" onclick="toggleAbstract('abstract-AdeWel19')">Abstract<span id="arrow-abstract-AdeWel19" class="arrow arrow-down">▼</span></span> <a href="http://mlg.eng.cam.ac.uk/adrian/ICML2019-TibGM.pdf" class="tab-link">URL</a></p>
-</div>
-<div id="abstract-AdeWel19" class="abstract-content">
-<p>One of the challenges to reinforcement learning (RL) is scalable transferability among complex tasks. Incorporating a graphical model (GM), along with the rich family of related methods, as a basis for RL frameworks provides potential to address issues such as transferability, generalisation and exploration. Here we propose a flexible GM-based RL framework which leverages efficient inference procedures to enhance generalisation and transfer power. In our proposed transferable and information-based graphical model framework ‘TibGM’, we show the equivalence between our mutual information-based objective in the GM, and an RL consolidated objective consisting of a standard reward maximisation target and a generalisation/transfer objective. In settings where there is a sparse or deceptive reward signal, our TibGM framework is flexible enough to incorporate exploration bonuses depicting intrinsic rewards. We empirically verify improved performance and exploration power.</p>
-</div>
-</section>
-</div>
-</section>
-<section id="2018" class="level3">
-<h3 class="anchored" data-anchor-id="2018">2018</h3>
-<div id="AdeGhaWell18" class="entry-block">
-<section id="discovering-interpretable-representations-for-both-deep-generative-and-discriminative-models" class="level4">
-<h4 class="anchored" data-anchor-id="discovering-interpretable-representations-for-both-deep-generative-and-discriminative-models"><a href="http://mlg.eng.cam.ac.uk/adrian/ICML18-Discovering.pdf">Discovering interpretable representations for both deep generative and discriminative models</a></h4>
-<p>Tameem Adel, Zoubin Ghahramani, Adrian Weller, July 2018. (In 35th International Conference on Machine Learning). Stockholm Sweden.</p>
-<div class="tab-set">
-<p><span class="tab-link" onclick="toggleAbstract('abstract-AdeGhaWell18')">Abstract<span id="arrow-abstract-AdeGhaWell18" class="arrow arrow-down">▼</span></span> <a href="http://mlg.eng.cam.ac.uk/adrian/ICML18-Discovering.pdf" class="tab-link">URL</a></p>
-</div>
-<div id="abstract-AdeGhaWell18" class="abstract-content">
-<p>Interpretability of representations in both deep generative and discriminative models is highly desirable. Current methods jointly optimize an objective combining accuracy and interpretability. However, this may reduce accuracy, and is not applicable to already trained models. We propose two interpretability frameworks. First, we provide an interpretable lens for an existing model. We use a generative model which takes as input the representation in an existing (generative or discriminative) model, weakly supervised by limited side information. Applying a flexible and invertible transformation to the input leads to an interpretable representation with no loss in accuracy. We extend the approach using an active learning strategy to choose the most useful side information to obtain, allowing a human to guide what “interpretable” means. Our second framework relies on joint optimization for a representation which is both maximally informative about the side information and maximally compressive about the non-interpretable data factors. This leads to a novel perspective on the relationship between compression and regularization. We also propose a new interpretability evaluation metric based on our framework. Empirically, we achieve state-of-the-art results on three datasets using the two proposed algorithms.</p>
-</div>
-</section>
-</div>
-<div id="AhnCheShiWel18" class="entry-block">
-<section id="gauged-mini-bucket-elimination-for-approximate-inference" class="level4">
-<h4 class="anchored" data-anchor-id="gauged-mini-bucket-elimination-for-approximate-inference"><a href="http://mlg.eng.cam.ac.uk/adrian/Gauge_for_Holder_Inference.pdf">Gauged Mini-Bucket Elimination for Approximate Inference</a></h4>
-<p>Sungsoo Ahn, Michael Chertkov, Jinwoo Shin, Adrian Weller, April 2018. (In 21st International Conference on Artificial Intelligence and Statistics). Playa Blanca, Lanzarote, Canary Islands.</p>
-<div class="tab-set">
-<p><span class="tab-link" onclick="toggleAbstract('abstract-AhnCheShiWel18')">Abstract<span id="arrow-abstract-AhnCheShiWel18" class="arrow arrow-down">▼</span></span> <a href="http://mlg.eng.cam.ac.uk/adrian/Gauge_for_Holder_Inference.pdf" class="tab-link">URL</a></p>
-</div>
-<div id="abstract-AhnCheShiWel18" class="abstract-content">
-<p>Computing the partition function Z of a discrete graphical model is a fundamental inference challenge. Since this is computationally intractable, variational approximations are often used in practice. Recently, so-called gauge transformations were used to improve variational lower bounds on Z. In this paper, we propose a new gauge-variational approach, termed WMBE-G, which combines gauge transformations with the weighted mini-bucket elimination (WMBE) method. WMBE-G can provide both upper and lower bounds on Z, and is easier to optimize than the prior gauge-variational algorithm. We show that WMBE-G strictly improves the earlier WMBE approximation for symmetric models including Ising models with no magnetic field. Our experimental results demonstrate the effectiveness of WMBE-G even for generic, nonsymmetric models.</p>
-</div>
-</section>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
+<p>Gaussian process (GP) latent variable models offer a powerful way to capture uncertainty and correlations in unsupervised learning. We present a novel approach to variational inference for GP latent variable models that leverages sparse approximations and introduces a deep variational framework. This approach improves scalability and efficiency while maintaining high-quality uncertainty estimates and model flexibility. We demonstrate the effectiveness of our method on various benchmarks, highlighting its advantages over existing techniques in terms of both computational efficiency and predictive performance.</p>
 </div>
 </section>
 </div>
 
 
-
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
