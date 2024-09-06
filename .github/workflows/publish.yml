@@ -4,6 +4,9 @@ on:
       - main
   workflow_dispatch: # manual trigger for testing
 
+permissions:
+  contents: write
+  
 name: Deploy to GitHub Pages
 
 jobs:
