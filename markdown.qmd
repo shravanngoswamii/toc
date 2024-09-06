@@ -1,0 +1,118 @@
+---
+pagetitle: Publications by Year
+toc: true
+toc-depth: 3
+---
+
+## Publications by Year
+
+### 2022 {#2022}
+
+::: {#AllWenMarEtal22 .entry-block }
+
+#### [Sparse MoEs meet Efficient Ensembles](https://openreview.net/forum?id=i0ZM36d2qU)
+
+James Urquhart Allingham, Florian Wenzel, Zelda E Mariet, Basil Mustafa, Joan Puigcerver, Neil Houlsby, Ghassen Jerfel, Vincent Fortuin, Balaji Lakshminarayanan, Jasper Snoek, Dustin Tran, Carlos Riquelme Ruiz, Rodolphe Jenatton, 2022. 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AllWenMarEtal22 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AllWenMarEtal22')"}
+[URL](https://openreview.net/forum?id=i0ZM36d2qU){.tab-link}
+:::
+
+::: {#abstract-AllWenMarEtal22 .abstract-content}
+Machine learning models based on the aggregated outputs of submodels, either at the activation or prediction levels, often exhibit strong performance compared to individual models. We study the interplay of two popular classes of such models: ensembles of neural networks and sparse mixture of experts (sparse MoEs). First, we show that the two approaches have complementary features whose combination is beneficial. This includes a comprehensive evaluation of sparse MoEs in uncertainty related benchmarks. Then, we present efficient ensemble of experts (E3), a scalable and simple ensemble of sparse MoEs that takes the best of both classes of models, while using up to 45% fewer FLOPs than a deep ensemble. Extensive experiments demonstrate the accuracy, log-likelihood, few-shot learning, robustness, and uncertainty improvements of E3 over several challenging vision Transformer-based baselines. E3 not only preserves its efficiency while scaling to models with up to 2.7B parameters, but also provides better predictive performance and uncertainty estimates for larger models.
+:::
+
+**Comment:** [Code](https://github.com/google-research/vmoe)
+:::
+
+::: {#AntJanAllEtal22 .entry-block }
+
+#### [Adapting the Linearised Laplace Model Evidence for Modern Deep Learning](https://proceedings.mlr.press/v162/antoran22a.html)
+
+Javier Antorán, David Janz, James Urquhart Allingham, Erik A. Daxberger, Riccardo Barbano, Eric T. Nalisnick, José Miguel Hernández-Lobato, Edited by Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvári, Gang Niu, Sivan Sabato. 2022. (In 39th International Conference on Machine Learning, Proceedings of Machine Learning Research, Volume 162, Pages 796–821). 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AntJanAllEtal22 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AntJanAllEtal22')"}
+[URL](https://proceedings.mlr.press/v162/antoran22a.html){.tab-link}
+:::
+
+::: {#abstract-AntJanAllEtal22 .abstract-content}
+The linearised Laplace method for estimating model uncertainty has received renewed attention in the Bayesian deep learning community. The method provides reliable error bars and admits a closed-form expression for the model evidence, allowing for scalable selection of model hyperparameters. In this work, we examine the assumptions behind this method, particularly in conjunction with model selection. We show that these interact poorly with some now-standard tools of deep learning–stochastic approximation methods and normalisation layers–and make recommendations for how to better adapt this classic method to the modern setting. We provide theoretical support for our recommendations and validate them empirically on MLPs, classic CNNs, residual networks with and without normalisation layers, generative autoencoders and transformers.
+:::
+
+:::
+
+### 2021 {#2021}
+
+::: {#AitYanObe21 .entry-block }
+
+#### [Deep kernel processes](http://proceedings.mlr.press/v139/aitchison21a/aitchison21a.pdf)
+
+Laurence Aitchison, Adam X. Yang, Sebastian W. Ober, 2021. 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AitYanObe21 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AitYanObe21')"}
+[URL](http://proceedings.mlr.press/v139/aitchison21a/aitchison21a.pdf){.tab-link}
+:::
+
+::: {#abstract-AitYanObe21 .abstract-content}
+We define deep kernel processes in which positive definite Gram matrices are progressively transformed by nonlinear kernel functions and by sampling from (inverse) Wishart distributions. Remarkably, we find that deep Gaussian processes (DGPs), Bayesian neural networks (BNNs), infinite BNNs, and infinite BNNs with bottlenecks can all be written as deep kernel processes. For DGPs the equivalence arises because the Gram matrix formed by the inner product of features is Wishart distributed, and as we show, standard isotropic kernels can be written entirely in terms of this Gram matrix — we do not need knowledge of the underlying features. We define a tractable deep kernel process, the deep inverse Wishart process, and give a doubly-stochastic inducing-point variational inference scheme that operates on the Gram matrices, not on the features, as in DGPs. We show that the deep inverse Wishart process gives superior performance to DGPs and infinite BNNs on fully-connected baselines.
+:::
+:::
+
+::: {#AntBhaAdeEtal20 .entry-block }
+
+#### [Getting a CLUE: A Method for Explaining Uncertainty Estimates](https://openreview.net/forum?id=XSLF1XFq5h)
+
+Javier Antorán, Umang Bhatt, Tameem Adel, Adrian Weller, José Miguel Hernández-Lobato. 2021, April. 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AntBhaAdeEtal20 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AntBhaAdeEtal20')"}
+[URL](https://openreview.net/forum?id=XSLF1XFq5h){.tab-link}
+:::
+
+::: {#abstract-AntBhaAdeEtal20 .abstract-content}
+Both uncertainty estimation and interpretability are important factors for trustworthy machine learning systems. However, there is little work at the intersection of these two areas. We address this gap by proposing a novel method for interpreting uncertainty estimates from differentiable probabilistic models, like Bayesian Neural Networks (BNNs). Our method, Counterfactual Latent Uncertainty Explanations (CLUE), indicates how to change an input, while keeping it on the data manifold, such that a BNN becomes more confident about the input's prediction. We validate CLUE through 1) a novel framework for evaluating counterfactual explanations of uncertainty, 2) a series of ablation experiments, and 3) a user study. Our experiments show that CLUE outperforms baselines and enables practitioners to better understand which input patterns are responsible for predictive uncertainty..
+:::
+
+:::
+
+### 2020 {#2020}
+
+::: {#AntAllHer20 .entry-block }
+
+#### [Depth Uncertainty in Neural Networks](https://proceedings.neurips.cc/paper/2020/hash/781877bda0783aac5f1cf765c128b437-Abstract.html)
+
+Javier Antorán, James Urquhart Allingham, José Miguel Hernández-Lobato, 2020. 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AntAllHer20 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AntAllHer20')"}
+[URL](https://proceedings.neurips.cc/paper/2020/hash/781877bda0783aac5f1cf765c128b437-Abstract.html){.tab-link}
+:::
+
+::: {#abstract-AntAllHer20 .abstract-content}
+Existing methods for estimating uncertainty in deep learning tend to require multiple forward passes, making them unsuitable for applications where computational resources are limited. To solve this, we perform probabilistic reasoning over the depth of neural networks. Different depths correspond to subnetworks which share weights and whose predictions are combined via marginalisation, yielding model uncertainty. By exploiting the sequential structure of feed-forward networks, we are able to both evaluate our training objective and make predictions with a single forward pass. We validate our approach on real-world regression and image classification tasks. Our approach provides uncertainty calibration, robustness to dataset shift, and accuracies competitive with more computationally expensive baselines.
+:::
+
+**Comment:** [Code](https://github.com/cambridge-mlg/DUN)
+
+:::
+
+::: {#AshSoTebetal20 .entry-block }
+
+#### [Sparse Gaussian process variational autoencoders](https://arxiv.org/abs/2010.10177)
+
+Matthew Ashman, Jonny So, Will Tebbutt, Vincent Fortuin, Michael Pearce, Richard E. Turner. 2020. 
+
+::: {.tab-set}
+[Abstract[▼]{#arrow-abstract-AshSoTebetal20 .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-AshSoTebetal20')"}
+[URL](https://arxiv.org/abs/2010.10177){.tab-link}
+:::
+
+::: {#abstract-AshSoTebetal20 .abstract-content}
+Gaussian process (GP) latent variable models offer a powerful way to capture uncertainty and correlations in unsupervised learning. We present a novel approach to variational inference for GP latent variable models that leverages sparse approximations and introduces a deep variational framework. This approach improves scalability and efficiency while maintaining high-quality uncertainty estimates and model flexibility. We demonstrate the effectiveness of our method on various benchmarks, highlighting its advantages over existing techniques in terms of both computational efficiency and predictive performance.
+:::
+
+:::
+

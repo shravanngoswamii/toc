@@ -14,6 +14,9 @@ website:
   navbar:
     title: "Publications, Machine Learning Group, Department of Engineering, Cambridge"
     background: "#c6dbef"
+    right: 
+      - text: Markdown
+        href: markdown.qmd
     tools:
       - icon: bi bi-ticket-detailed
         text: Abstract-Toggle
