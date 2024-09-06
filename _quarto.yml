@@ -1,0 +1,46 @@
+project:
+  type: website
+  preview:
+    # Change port if it's busy in your system or just remove this line so that It will automatically use any free port
+    port: 4200
+    browser: true
+
+# These cannot be used as variables. They are reserved for the project configuration.
+website:
+  title: "MLG Cambridge"
+  search: 
+    location: navbar
+    type: overlay
+  navbar:
+    title: "Publications, Machine Learning Group, Department of Engineering, Cambridge"
+    background: "#c6dbef"
+    tools:
+      - icon: bi bi-ticket-detailed
+        text: Abstract-Toggle
+      
+  sidebar: false
+
+  back-to-top-navigation: true
+  page-navigation: true
+
+format:
+  html:
+    theme:
+      light: cosmo
+    sidebar: false
+    css: assets/style.css
+    toc: true
+    grid:
+      sidebar-width: 0px
+      body-width: 2400px
+      margin-width: 300px
+    smooth-scroll: true
+    code-overflow: wrap
+    include-after-body:
+      text: |
+        <footer id="footer">
+          <p>Publications of the <a href="https://mlg.eng.cam.ac.uk/">Cambridge Machine Learning Group</a>. Follow us on <span class="icon twitter-icon"></span><a href="https://twitter.com/CambridgeMLG">@CambridgeMLG</a> and check out our GitHub <span class="icon github-icon"></span><a href="https://github.com/cambridge-mlg">Cambridge-MLG</a>.</p>
+          <p>Created by <a href="https://shravangoswami.com/">Shravan Goswami</a>!</p>
+          <p>Powered by <a href="https://quarto.org/">Quarto</a>. © <a href="https://mlg.eng.cam.ac.uk/">Cambridge Machine Learning Group</a>.</p>
+        </footer>
+        <script type="text/javascript" src="assets/script.js"></script>

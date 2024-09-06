@@ -1,0 +1,15 @@
+---
+pagetitle: Publications by Year
+toc: true
+toc-depth: 3
+listing:
+  id: yearwise-publications
+  template: years.ejs
+  contents: by-year.yaml
+---
+
+## Publications by Year
+
+::: {#yearwise-publications}
+
+:::

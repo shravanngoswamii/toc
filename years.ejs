@@ -1,0 +1,88 @@
+<% for (const item of items) { %>
+
+### <%- item.year %> {#<%- item.year %>}
+
+<% for (const pubdata of item.data) { %>
+
+::: {#<%- pubdata.id %> .entry-block }
+
+<% if (pubdata.title && pubdata.url) { %>
+#### [<%- pubdata.title %>](<%- pubdata.url %>)
+<% } else { %>
+#### <%- pubdata.title %>
+<% } %>
+
+<% 
+// Extract and format fields
+const fields = {
+    author: pubdata.author_formatted || '',
+    editor: pubdata.editor_formatted || '',
+    booktitle: pubdata.booktitle || '',
+    journal: pubdata.journal || '',
+    institution: pubdata.institution || '',
+    school: pubdata.school || '',
+    address: pubdata.address || '',
+    location: pubdata.location || '',
+    publisher: pubdata.publisher || '',
+    series: pubdata.series || '',
+    doi: pubdata.doi || '',
+    isbn: pubdata.isbn || '',
+    issn: pubdata.issn || '',
+    acmid: pubdata.acmid || '',
+    pubmedid: pubdata.pubmedid || '',
+    note: pubdata.note || '',
+    day: pubdata.day || '',
+    month: pubdata.month || '',
+    abstract: pubdata.abstract || '',
+    annote: pubdata.annote || ''
+};
+
+// Construct the entry text
+const entry_text_parts = [
+    fields.author ? `${fields.author}, ` : '',
+    fields.day ? `${fields.day}, ` : '',
+    fields.month ? `${fields.month} ` : '',
+    `${pubdata.year}. `,
+    fields.booktitle ? `(In ${fields.booktitle}). ` : '',
+    fields.editor ? `Edited by ${fields.editor}. ` : '',
+    fields.journal ? `(${fields.journal}). ` : '',
+    fields.institution ? `${fields.institution}, ` : '',
+    fields.school ? `${fields.school}, ` : '',
+    fields.address ? `${fields.address}. ` : '',
+    fields.location ? `${fields.location}. ` : '',
+    fields.publisher ? `${fields.publisher}. ` : '',
+    fields.series ? `${fields.series}. ` : '',
+    fields.doi ? `**DOI**: ${fields.doi}. ` : '',
+    fields.isbn ? `**ISBN**: ${fields.isbn}. ` : '',
+    fields.issn ? `**ISSN**: ${fields.issn}. ` : '',
+    fields.acmid ? `**ACM ID**: ${fields.acmid}. ` : '',
+    fields.pubmedid ? `**PubMed ID**: ${fields.pubmedid}. ` : '',
+    fields.note ? `**Note**: ${fields.note}. ` : ''
+].join('').trim();
+%>
+
+<%- entry_text_parts %>
+
+<% if (fields.abstract || pubdata.url) { %>
+::: {.tab-set}
+<% if (fields.abstract) { %>
+[Abstract[▼]{#arrow-abstract-<%- pubdata.id %> .arrow .arrow-down}]{.tab-link onclick="toggleAbstract('abstract-<%- pubdata.id %>')"}
+<% } %> <% if (pubdata.url) { %> [URL](<%- pubdata.url %>){.tab-link}
+<% } %>
+:::
+
+<% if (fields.abstract) { %>
+::: {#abstract-<%- pubdata.id %> .abstract-content}
+<%= fields.abstract %>
+:::
+<% } %>
+<% } %>
+
+<% if (fields.annote) { %>
+**Comment:** <%= fields.annote %>
+<% } %>
+
+:::
+
+<% } %>
+<% } %>
